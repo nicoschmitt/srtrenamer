@@ -4,7 +4,10 @@
   "description": "",
   "author": "Nicolas Schmitt",
   "scripts": {
-    "start": "electron ./app --enable-logging"
+    "start": "electron ./app --enable-logging",
+    "postinstall": "install-app-deps",
+    "pack": "build --dir",
+    "dist": "build"
   },
   "devDependencies": {
     "angular": "^1.5.7",
@@ -19,5 +22,12 @@
     "gulp-concat": "^2.6.0",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.4"
+  },
+  "build": {
+    "appId": "nico.srtrenamer",
+    "productName": "SRT Renamer",
+    "win": {
+      "iconUrl": "https://raw.githubusercontent.com/nicoschmitt/srtrenamer/master/build/icon.ico"
+    }
   }
 }

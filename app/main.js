@@ -1,3 +1,9 @@
+// Install
+
+if(require('electron-squirrel-startup')) return;
+
+// App
+
 const electron = require('electron')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
@@ -28,5 +34,3 @@ app.on('activate', function () {
   }
 })
 
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
