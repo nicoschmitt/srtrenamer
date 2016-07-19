@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>SRT Renamer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="app/lib/angular-material.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+
+    <script src="app/lib/angular.full.min.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/scripts/home.js"></script>
+  </head>
+  
+  <body>
+    <div class="content">
+      <h1>Renamer</h1>
+      <div layout="row" layout-align="center start">
+        <div layout="column" layout-align="none stretch" flex="100">
+          <div flex class="main-container">
+              <div flex ng-view class="main"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "srtrenamer",
+  "version": "1.0.0",
+  "description": "SRT Renamer",
+  "author": "Nicolas Schmitt",
+  "main": "main.js",
+  "dependencies": {
+    "async": "^2.0.0",
+    "episode-parser": "^1.2.0",
+    "glob": "^7.0.5"
+  },
+  "build": {
+
+  }
+}

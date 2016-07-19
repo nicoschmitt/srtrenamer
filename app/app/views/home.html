@@ -1,0 +1,27 @@
+<div>
+    <p>Current directory: {{vm.folder}}</p>
+</div>
+<div layout="column" class="divbutton">
+    <div layout="row">
+        <button ng-click="vm.openDir()">Open</button>
+        <button ng-click="vm.chooseDir()">Choose Another</button>
+        <button ng-click="vm.refresh()">Refresh</button>
+    </div>
+    <div layout="row">
+        <button ng-click="vm.rename()">Rename selected files</button>
+    </div>
+</div>
+<div class="renamelist">
+    <table>
+        <tr>
+            <th>From</th>
+            <th></th>
+            <th>To</th>
+        </tr>
+        <tr ng-repeat="elt in vm.arrToRename">
+            <td>{{elt.from}}</td>
+            <td class="arrow" ng-class="{selected: elt.selected}" ng-click="vm.onSelect(elt)"></td>
+            <td>{{elt.to}}</td>
+        </tr>
+    </table>
+</div>

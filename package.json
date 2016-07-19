@@ -1,0 +1,23 @@
+{
+  "name": "srtrename",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Nicolas Schmitt",
+  "scripts": {
+    "start": "electron ./app --enable-logging"
+  },
+  "devDependencies": {
+    "angular": "^1.5.7",
+    "angular-animate": "^1.5.7",
+    "angular-aria": "^1.5.7",
+    "angular-material": "^1.1.0-rc.5",
+    "angular-route": "^1.5.7",
+    "del": "^2.2.1",
+    "electron-builder": "^5.12.1",
+    "electron-prebuilt": "^1.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4"
+  }
+}
