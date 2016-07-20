@@ -1,6 +1,6 @@
 {
   "name": "srtrenamer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SRT Renamer",
   "author": "Nicolas Schmitt",
   "main": "main.js",
