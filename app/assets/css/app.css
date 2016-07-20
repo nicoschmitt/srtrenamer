@@ -5,7 +5,7 @@
   src: local('Roboto'), local('Roboto'), url(../fonts/Roboto-Regular.ttf) format('truetype');
 }
 
-body {
+body, html, .content {
     font-family: Roboto;
     background-color: black;
     color: #eee;
