@@ -59,6 +59,7 @@
             // get video without subtitles
             function findCorrectSRT(filesToFind, filesToIgnore) {
                 vm.arrToRename = [];
+                
                 filesToFind.forEach(function(element) {
                     episodes.findSrt(element, filesToIgnore, (srt) => {
                         if (srt != null) {
