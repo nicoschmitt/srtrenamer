@@ -1,6 +1,9 @@
 (function() {
     var app = angular.module('myApp', [ 'ngRoute', "ngMaterial" ]);
-  
+    
+    const { version } = require("../package.json");
+    document.title += " - " + version;
+
     app.config(['$routeProvider',
         function ($routeProvider) {
 
