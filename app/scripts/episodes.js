@@ -2,7 +2,7 @@
     const path  = require("path");
     const async = require("async");
     const fs    = require("fs");
-    var parser  = require('episode-parser')
+    var parser  = require('episode-parser');
 
     function find(folder, exts, callback) {
         fs.readdir(folder, (err, files) => {
