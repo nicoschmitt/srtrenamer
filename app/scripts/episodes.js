@@ -50,7 +50,7 @@
                 potentials.forEach(elt => {
                     var pObj = path.parse(elt);
                     var srt = parser(pObj.base);
-                    if (ep.show.toLowerCase() == srt.show.toLowerCase() && ep.season == srt.season && ep.episode == srt.episode) {
+                    if (srt && ep.show.toLowerCase() == srt.show.toLowerCase() && ep.season == srt.season && ep.episode == srt.episode) {
                         return callback({
                             dir: o.dir,
                             from: pObj.base,
