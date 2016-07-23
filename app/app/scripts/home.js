@@ -80,6 +80,23 @@
                 episodes.getVideoWithoutSRT(folder, findCorrectSRT);
             }
 
+            // drag and drop support
+            $scope.$on('$dropletReady', () => {
+                vm.droplet.allowedExtensions([/.*/]);
+            });
+
+            $scope.$on("$dropletFileAdded", () => {
+                var files = vm.droplet.getFiles();
+                if (files && files.length > 0) {
+                    var file = files[0].file.path;
+                    files.length = 0;
+
+                    var folder = path.dirname(file);
+                    localStorage.setItem("folder", folder);
+                    updateRenameList();
+                }
+            });
+
             updateRenameList();
         }
     ]);

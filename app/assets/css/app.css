@@ -19,6 +19,17 @@ body, html, .content {
     outline: none;
 }
 
+.dropzone {
+  margin-right: 20px;
+  padding: 15px 0px;
+  border-radius: 5px;
+}
+
+.dropzone.event-dragover {
+  background-color: #404040;
+  border: 2px dashed #eee;
+}
+
 .divbutton button {
   margin-top: 20px;
   margin-right: 20px;

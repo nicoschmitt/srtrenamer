@@ -1,6 +1,6 @@
 {
   "name": "srtrename",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "author": "Nicolas Schmitt",
   "scripts": {
@@ -21,7 +21,8 @@
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.5.4"
+    "gulp-uglify": "^1.5.4",
+    "ng-droplet": "^0.5.16"
   },
   "build": {
     "appId": "nico.srtrenamer",

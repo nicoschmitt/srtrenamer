@@ -7,7 +7,7 @@ var concat   = require("gulp-concat");
 // Dev
 
 gulp.task("clean", function() {
-   del("electron-app/app/lib/*"); 
+   del("app/app/lib/*"); 
 });
 
 gulp.task('angular-js', function() {
@@ -16,18 +16,28 @@ gulp.task('angular-js', function() {
                     "node_modules/angular-route/angular-route.js",
                     "node_modules/angular-animate/angular-animate.js",
                     "node_modules/angular-aria/angular-aria.js",
-                    "node_modules/angular-material/angular-material.js"
+                    "node_modules/angular-material/angular-material.js",
+                    "node_modules/ng-droplet/dist/ng-droplet.js"
                 ])
                 .pipe(concat("angular.full.min.js"))
                 .pipe(uglify())
-                .pipe(gulp.dest("electron-app/app/lib"));
+                .pipe(gulp.dest("app/app/lib"));
 });
+
+// gulp.task('lib-js', function() {
+//     return gulp.src([
+//                     "node_modules/ng-droplet/dist/ng-droplet.js"
+//                 ])
+//                 .pipe(concat("lib.min.js"))
+//                 .pipe(uglify())
+//                 .pipe(gulp.dest("electron-app/app/lib"));
+// });
 
 gulp.task('angular-css', function() {
     return gulp.src([
                     "node_modules/angular-material/angular-material.min.css"
                 ])
-                .pipe(gulp.dest("electron-app/app/lib"));
+                .pipe(gulp.dest("app/app/lib"));
 });
 
 

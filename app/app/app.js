@@ -1,5 +1,5 @@
 (function() {
-    var app = angular.module('myApp', [ 'ngRoute', "ngMaterial" ]);
+    var app = angular.module('myApp', [ 'ngRoute', "ngMaterial", "ngDroplet" ]);
     
     const { version } = require("../package.json");
     document.title += " - " + version;
