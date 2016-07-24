@@ -11,17 +11,15 @@
         <button ng-click="vm.rename()">Rename selected files</button>
     </div>
 </div>
-<div class="renamelist">
-    <table>
-        <tr>
-            <th>From</th>
-            <th></th>
-            <th>To</th>
-        </tr>
-        <tr ng-repeat="elt in vm.arrToRename">
-            <td>{{elt.from}}</td>
-            <td class="arrow" ng-class="{selected: elt.selected}" ng-click="vm.onSelect(elt)"></td>
-            <td>{{elt.to}}</td>
-        </tr>
-    </table>
+<div class="renamelist" layout="column" flex="100">
+    <div layout="row" class="header" flex="100">
+        <div flex="45">From</div>
+        <div flex="10"></div>
+        <div flex="45">To</div>
+    </div>
+    <div layout="row" class="srt" ng-repeat="elt in vm.arrToRename" flex="100">
+        <div flex="45">{{elt.from}}</div>
+        <div flex="10" class="arrow" ng-class="{selected: elt.selected}" ng-click="vm.onSelect(elt)"></div>
+        <div flex="45">{{elt.to}}</div>
+    </div>
 </div>
