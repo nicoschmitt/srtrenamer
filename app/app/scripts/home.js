@@ -77,19 +77,21 @@
                 vm.folder = folder;
                 
                 // get all videos and check if there is a subtitle already
+                vm.arrToRename = [];
                 episodes.getVideoWithoutSRT(folder, findCorrectSRT);
             }
 
             // drag and drop support
             $scope.$on('$dropletReady', () => {
                 vm.droplet.allowedExtensions([/.*/]);
+                vm.droplet.setMaximumValidFiles(1);
             });
 
             $scope.$on("$dropletFileAdded", () => {
-                var files = vm.droplet.getFiles();
+                var files = vm.droplet.getFiles(vm.droplet.FILE_TYPES.VALID);
                 if (files && files.length > 0) {
                     var file = files[0].file.path;
-                    files.length = 0;
+                    vm.droplet.getFiles().length = 0;
 
                     var folder = path.dirname(file);
                     localStorage.setItem("folder", folder);
