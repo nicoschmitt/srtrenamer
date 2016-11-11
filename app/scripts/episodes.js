@@ -42,14 +42,14 @@
 
     module.exports.findSrt = function(video, ignore, callback) {
         var o = path.parse(video);
-        var ep = parser(o.base);
+        var ep = parser(o.base.replace("'", ""));
 
         find(o.dir, [".srt"], (err, files) => {
             if (files && files.length > 0) {
                 var potentials = files.filter((elt) => { return ignore.indexOf(elt) < 0 });
                 potentials.forEach(elt => {
                     var pObj = path.parse(elt);
-                    var srt = parser(pObj.base);
+                    var srt = parser(pObj.base.replace("'", ""));
                     if (srt && ep.show.toLowerCase() == srt.show.toLowerCase() && ep.season == srt.season && ep.episode == srt.episode) {
                         return callback({
                             dir: o.dir,
