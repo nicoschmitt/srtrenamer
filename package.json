@@ -16,10 +16,10 @@
     "angular-material": "^1.1.1",
     "angular-route": "^1.5.8",
     "del": "^2.2.2",
-    "electron-builder": "^7.24.1",
-    "electron-prebuilt": "^1.4.6",
+    "electron-builder": "^8.6.0",
+    "electron": "^1.4.7",
     "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
+    "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^2.0.0",
     "ng-droplet": "^0.5.17"
