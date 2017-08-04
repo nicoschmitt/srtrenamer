@@ -41,21 +41,23 @@
     }
 
     module.exports.findSrt = function(video, ignore, callback) {
-        var o = path.parse(video);
-        var ep = parser(o.base.replace("'", ""));
+        let o = path.parse(video);
+        let ep = parser(o.base.replace("'", ""));
 
         find(o.dir, [".srt"], (err, files) => {
             if (files && files.length > 0) {
-                var potentials = files.filter((elt) => { return ignore.indexOf(elt) < 0 });
+                let potentials = files.filter((elt) => { return ignore.indexOf(elt) < 0 });
                 potentials.forEach(elt => {
-                    var pObj = path.parse(elt);
-                    var srt = parser(pObj.base.replace("'", ""));
+                    let pObj = path.parse(elt);
+                    let base = pObj.base.replace(/'/, '').replace(/\s+(\-\s*)?/g, '.');
+                    base = base.replace(/\((\d{4})\)/, '$1');
+                    let srt = parser(base);
                     if (srt && ep.show.toLowerCase() == srt.show.toLowerCase() && ep.season == srt.season && ep.episode == srt.episode) {
                         return callback({
                             dir: o.dir,
                             from: pObj.base,
                             to: o.base,
-                            selected: true
+                            selected: true,
                         });
                     }
                 });

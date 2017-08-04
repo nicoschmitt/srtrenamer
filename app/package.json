@@ -1,11 +1,11 @@
 {
   "name": "srtrenamer",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "SRT Renamer",
   "author": "Nicolas Schmitt",
   "main": "main.js",
   "dependencies": {
-    "async": "^2.4.1",
+    "async": "^2.5.0",
     "electron-squirrel-startup": "^1.0.0",
     "episode-parser": "^1.2.0"
   }
